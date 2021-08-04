@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/modules.xml
+.gitignore
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.vscode/settings.json
+*.data
+*.index
+*.pb
+.ipynb_checkpoints
+
+# check points
+/course_3/week_4/training_checkpoints/
+/course_3/week_4/one_step/
