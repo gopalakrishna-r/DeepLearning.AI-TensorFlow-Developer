@@ -141,3 +141,4 @@ dmypy.json
 # check points
 /course_3/week_4/training_checkpoints/
 /course_3/week_4/one_step/
+*tfrecord*

@@ -1,0 +1,22 @@
+name: sunspots-hyperparameter-sweeps
+program: TimeSeries\sunspots_forecaster.py
+method: random
+metric:
+  goal: minimize
+  name: mean_absolute_error
+parameters:
+  batch_size:
+    values: [ 32, 64, 100, 256]
+  filters_1:
+    values: [60, 64]
+  filters_2:
+    values: [10, 30]
+  window_size:
+    values: [20, 30, 60, 64]
+early_terminate:
+  type: hyperband
+  s: 2
+  eta: 3
+  max_iter: 27
+
+
