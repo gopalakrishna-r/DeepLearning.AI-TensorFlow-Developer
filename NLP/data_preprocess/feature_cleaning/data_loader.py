@@ -1,8 +1,9 @@
-import os
+import pathlib
 import tarfile
 from urllib import request
-import pathlib
+
 import pandas as pd
+
 DOWNLOAD_URL = "https://raw.githubusercontent.com/ageron/handson-ml2/master/"
 HOUSING_PATH = pathlib.Path("datasets", "housing")
 HOUSING_URL = DOWNLOAD_URL + "datasets/housing/housing.tgz"
@@ -21,5 +22,3 @@ def load_housing_data(housing_path=HOUSING_PATH):
     fetch_housing_data()
     csv_path = pathlib.Path.joinpath(housing_path, "housing.csv")
     return pd.read_csv(csv_path)
-
-

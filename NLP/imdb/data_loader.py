@@ -1,8 +1,7 @@
 import tensorflow_datasets as tfds
-import numpy as np
 
 
 def load_imdb_data(dataset_name):
     imdb, info = tfds.load(dataset_name, with_info=True, as_supervised=True)
-    train, test = imdb['train'], imdb['test']
+    train, test = imdb["train"], imdb["test"]
     return train, test, info

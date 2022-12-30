@@ -1,12 +1,12 @@
-import itertools
-from collections import deque
-import numpy as np
-import tensorflow.keras as keras
 import csv
 from pathlib import Path
-import os
 
-SUNSPOTS_URI = "https://storage.googleapis.com/laurencemoroney-blog.appspot.com/Sunspots.csv"
+import numpy as np
+import tensorflow.keras as keras
+
+SUNSPOTS_URI = (
+    "https://storage.googleapis.com/laurencemoroney-blog.appspot.com/Sunspots.csv"
+)
 DATA_PATH = Path.cwd().joinpath("datasets")
 SPLIT_DATA_PATH = DATA_PATH.joinpath("split")
 SUNSPOTS_CSV_FILE = DATA_PATH.joinpath("Sunspots.csv")
@@ -22,9 +22,11 @@ def fetch_sunspots_data(csv_data, header, split_time):
 
 def process_csv_data():
     DATA_PATH.mkdir(parents=True, exist_ok=True)
-    keras.utils.get_file(origin=SUNSPOTS_URI, fname=SUNSPOTS_CSV_FILE, cache_dir=DATA_PATH)
+    keras.utils.get_file(
+        origin=SUNSPOTS_URI, fname=SUNSPOTS_CSV_FILE, cache_dir=DATA_PATH
+    )
     with open(SUNSPOTS_CSV_FILE) as csvfile:
-        reader = csv.reader(csvfile, delimiter=',')
+        reader = csv.reader(csvfile, delimiter=",")
         header = ",".join(next(reader))
         return [*reader], header
 

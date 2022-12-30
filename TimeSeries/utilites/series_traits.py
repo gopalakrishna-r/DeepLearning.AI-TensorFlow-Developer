@@ -6,9 +6,9 @@ def trend(time, slope=0):
 
 
 def seasonal_pattern(season_time):
-    return np.where(season_time < 0.4,
-                    np.cos(season_time * 2 * np.pi),
-                    1 / np.exp(3 * season_time))
+    return np.where(
+        season_time < 0.4, np.cos(season_time * 2 * np.pi), 1 / np.exp(3 * season_time)
+    )
 
 
 def seasonality(time, period, amplitude=1, phase=0):
@@ -66,6 +66,7 @@ def impulses(time, amplitude=1, seed=None):
 
 def moving_average_forecast(series, window_size):
     forecast = [
-        series[index:index + window_size].mean() for index in range(len(series) - window_size)
+        series[index : index + window_size].mean()
+        for index in range(len(series) - window_size)
     ]
     return np.array(forecast)
