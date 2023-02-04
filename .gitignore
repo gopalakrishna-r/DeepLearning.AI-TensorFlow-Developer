@@ -141,6 +141,7 @@ dmypy.json
 # check points
 /course_3/week_4/training_checkpoints/
 <<<<<<< HEAD
+<<<<<<< HEAD
 /course_3/week_4/one_step/
 *tfrecord*
 /d/codebase/DeepLearning.AI-TensorFlow-Developer/course_3/glove.6B.100d.txt
@@ -148,3 +149,6 @@ dmypy.json
 =======
 /course_3/week_4/one_step/
 >>>>>>> 34e6b21abfc5b069204bb7f9f57f96b96d215fc6
+=======
+/course_3/week_4/one_step/
+>>>>>>> origin/main

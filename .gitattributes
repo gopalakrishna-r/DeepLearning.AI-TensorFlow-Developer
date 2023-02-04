@@ -5,6 +5,9 @@
 .tsv filter=lfs diff=lfs merge=lfs -text
 .npz filter=lfs diff=lfs merge=lfs -text
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.txt filter=lfs diff=lfs merge=lfs -text
 =======
 >>>>>>> 34e6b21abfc5b069204bb7f9f57f96b96d215fc6
+=======
+>>>>>>> origin/main
