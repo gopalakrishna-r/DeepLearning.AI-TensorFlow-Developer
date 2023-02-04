@@ -54,10 +54,7 @@ class CancerNet:
 
                 # (CONV => RELU => POOL) * 2
                 outputs = slim.stack(
-                    outputs,
-                    separable_conv_blk,
-                    [(64, chan_dim), (64, chan_dim)],
-                    scope="separable_conv_blk_1",
+                    outputs, separable_conv_blk, [(64, chan_dim), (64, chan_dim)], scope='separable_conv_blk_1'
                 )
                 outputs = max_pool_2d()(outputs)
                 outputs = dropout()(outputs)
@@ -67,7 +64,7 @@ class CancerNet:
                     outputs,
                     separable_conv_blk,
                     [(128, chan_dim), (128, chan_dim), (128, chan_dim)],
-                    scope="separable_conv_blk_2",
+                    scope = 'separable_conv_blk_2'
                 )
                 outputs = max_pool_2d()(outputs)
                 outputs = dropout()(outputs)
