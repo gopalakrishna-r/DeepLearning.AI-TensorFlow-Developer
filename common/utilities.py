@@ -1,0 +1,32 @@
+import tensorflow as tf
+
+reshape = tf.reshape
+ones_like = tf.ones_like
+ones = tf.ones
+zeros_like = tf.zeros_like
+zeros = tf.zeros
+meshgrid = tf.meshgrid
+linspace = tf.linspace
+exp = tf.exp
+normal = tf.random.normal
+rand = tf.random.uniform
+matmul = tf.matmul
+reduce_sum = tf.reduce_sum
+reduce_mean = tf.reduce_mean
+argmax = tf.argmax
+tensor = tf.constant
+arange = tf.range
+astype = tf.cast
+int32 = tf.int32
+int64 = tf.int64
+float32 = tf.float32
+transpose = tf.transpose
+concat = tf.concat
+stack = tf.stack
+abs = tf.abs
+eye = tf.eye
+log = tf.math.log
+sigmoid = tf.sigmoid
+expand_dims = tf.expand_dims
+repeat = tf.repeat
+batch_matmul = tf.matmul
